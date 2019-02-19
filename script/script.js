@@ -5,7 +5,7 @@ const { promisify } = require('util')
 const writefile = promisify(fs.writeFile)
 
 module.exports = () => {
-  const JSON_FOLDER_PATH = path.join(__dirname, '../json/', 'mentors.json')
+  const JSON_FOLDER_PATH = path.join(__dirname, '../json/mentors.json')
 
   const getMentors = require('./helpers/data/get-mentors')
   const { attachStudents } = require('./helpers/data/attach-students')
@@ -19,4 +19,8 @@ module.exports = () => {
 
   const dataJson = buildJson(mentors)
   return writefile(JSON_FOLDER_PATH, JSON.stringify(dataJson))
+    .catch((err) => {
+      console.log('error while writing file')
+      console.log(err)
+    })
 }

@@ -10,10 +10,7 @@ const readfile = promisify(fs.readFile)
 
 class DataWorker {
   constructor() {
-    // console.log(__dirname)
-    // console.log(path.join(__dirname, 'json', 'mentors.json'))
-    // this.JSON_FILE_PATH = path.join(__dirname, '../../json/mentors.json')
-    this.JSON_FILE_PATH = '/app/json/mentors.json'
+    this.JSON_FILE_PATH = path.join(__dirname, '../../json/mentors.json')
     this.mentors = []
     this.tablesHash = ''
     this.updateRate = 180000
