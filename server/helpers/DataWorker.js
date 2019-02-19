@@ -49,6 +49,7 @@ class DataWorker {
     readfile(this.JSON_FILE_PATH, 'utf-8')
       .then((mentors) => {
         this.mentors = JSON.parse(mentors)
+        console.log(this.mentors)
       })
       .catch(err => console.log(err))
   }
