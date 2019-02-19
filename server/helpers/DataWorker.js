@@ -44,6 +44,7 @@ class DataWorker {
               this.tablesHash = sha512().update(data).digest('hex')
               this.updateMentorsList()
             })
+            .catch((err) => console.log(err))
         }
       })
   }
