@@ -13,7 +13,7 @@
   "keywords": [],
   "engines": {
     "npm": "6.x",
-    "node": "10.x"
+    "node": "11.x"
   },
   "author": "",
   "license": "ISC",
