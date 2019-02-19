@@ -12,10 +12,9 @@ class DataWorker {
   constructor() {
     this.JSON_FILE_PATH = path.join(__dirname, '../../json/mentors.json')
     this.mentors = []
-    this.tablesHash = null
-    this.updateRate = 10000
+    this.tablesHash = ''
+    this.updateRate = 180000
 
-    this.firstSyncUpdate()
     setInterval(this.compareHashes.bind(this), this.updateRate)
   }
 
@@ -31,6 +30,7 @@ class DataWorker {
     getStringFromExcelFiles()
       .then((data) => {
         const newHash = sha512().update(data).digest('hex')
+
         if (newHash !== this.tablesHash) {
           rebuildMentorsJson()
             .then(() => {
@@ -47,14 +47,6 @@ class DataWorker {
         this.mentors = JSON.parse(mentors)
       })
       .catch(err => console.log(err))
-  }
-
-  firstSyncUpdate() {
-    this.mentors = JSON.parse(fs.readFileSync(this.JSON_FILE_PATH, 'utf-8'))
-    getStringFromExcelFiles()
-      .then((data) => {
-        this.tablesHash = sha512().update(data).digest('hex')
-      })
   }
 }
 

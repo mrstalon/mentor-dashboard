@@ -13,13 +13,10 @@ let tasks = xlsx
 const attachTasksInfo = (student) => {
   student.tasks = []
   tasks.forEach((task) => {
-    const name = task[0]
-    const url = task[1]
-    const status = task[2]
     student.tasks.push({
-      name,
-      url,
-      status
+      name: task[0],
+      url: task[1],
+      status: task[2]
     })
   })
   return student
@@ -29,6 +26,7 @@ const getTasksList = () => {
   return tasks.map((task) => {
     return {
       name: task[0],
+      url: task[1],
       status: task[2]
     }
   })

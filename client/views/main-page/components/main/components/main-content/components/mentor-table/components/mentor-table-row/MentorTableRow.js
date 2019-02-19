@@ -12,7 +12,11 @@ class MentorTableRow extends React.Component {
 
     return (
       <tr>
-        <td style={tdStyles}>{task.name}</td>
+        <td style={tdStyles}>
+          <a href={task.url} target="_blank">
+            {task.name}
+          </a>
+        </td>
         {task.studentsTaskInfo.map((studentTaskInfo, id) => {
           const tdClass = cx({
             'done-task': studentTaskInfo.score,

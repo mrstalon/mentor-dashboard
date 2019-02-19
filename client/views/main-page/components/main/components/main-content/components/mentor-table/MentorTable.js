@@ -27,7 +27,13 @@ class MentorTable extends React.Component {
               <tr className="row100 head">
                 <th className="cell100" style={tdStyles}></th>
                 {mentor.tasksInfo[0].studentsTaskInfo.map((studentObj, id) => {
-                  return <th style={tdStyles} key={id}>{studentObj.github}</th>
+                  return (
+                    <th style={tdStyles} key={id}>
+                      <a href={`https://github.com/${studentObj.github}`} target="_blank">
+                        {studentObj.github}
+                      </a>
+                    </th>
+                  )
                 })}
               </tr>
             </thead>
