@@ -5,7 +5,7 @@ const { promisify } = require('util')
 const writefile = promisify(fs.writeFile)
 
 module.exports = () => {
-  const JSON_FOLDER_PATH = path.join('../json/mentors.json')
+  const JSON_FOLDER_PATH = path.join('../mentors.json')
 
   const getMentors = require('./helpers/data/get-mentors')
   const { attachStudents } = require('./helpers/data/attach-students')
