@@ -1,0 +1,40 @@
+.main__bg-image {
+  width: 100%;
+  height: 91vh;
+  position: absolute;
+
+  filter: blur(3px);
+  background-size: cover !important;
+  background-position: center center !important;
+
+  &.active {
+    animation: show-slide 1.5s;
+    display: block;
+  }
+
+  &.out {
+    animation: hide-slide 1.5s;
+    animation-fill-mode: forwards;
+    display: block;
+  }
+}
+
+@keyframes show-slide {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide-slide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

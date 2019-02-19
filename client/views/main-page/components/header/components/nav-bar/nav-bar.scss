@@ -1,0 +1,57 @@
+.nav-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+  width: 100%;
+  margin: 0 auto;
+  
+  
+  background-color: black;
+  
+  
+  transition: 0.2s all ease-in;
+  z-index: 5;
+
+  .nav-bar__logo {
+    width: 150px;
+    height: 60px;
+    margin-left: 15px;
+  }
+  
+  .auth-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 280px;
+    height: 100%;
+    margin-right: 15px;
+  
+  
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+.auth-bar__link {
+  text-decoration: none;
+  background: white;
+  color: black;
+  min-width: 100px;
+  height: 35px;
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+
+.auth-bar__link:hover {
+  background: gray;
+}

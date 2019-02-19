@@ -1,0 +1,18 @@
+.mentor-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .mentor-search__input {
+    margin-top: 30px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    font-size: 24px;
+    padding-left: 5px;
+  }
+}
+

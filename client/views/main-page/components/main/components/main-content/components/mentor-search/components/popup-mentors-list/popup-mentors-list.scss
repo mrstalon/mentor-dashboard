@@ -1,0 +1,21 @@
+.search__popup-menu {
+  position: absolute;
+  top: 85px;
+  width: 310px;
+  max-height: 330px;
+  border-radius: 5px;
+  overflow-y: scroll;
+
+  border: 1px solid #e0e1da;
+  background-color: #f1f1f1;
+  box-shadow: 0px 15px 26px 0px rgba(0, 0, 0, 0.64);
+  z-index: 9999;
+}
+
+.search__popup-menu-warning {
+  height: 100px;
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 20px;
+}
