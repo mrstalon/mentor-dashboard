@@ -15,6 +15,10 @@ class DataWorker {
     this.tablesHash = ''
     this.updateRate = 180000
 
+    // initial build
+    this.compareHashes()
+
+    // setting json update interval
     setInterval(this.compareHashes.bind(this), this.updateRate)
   }
 
