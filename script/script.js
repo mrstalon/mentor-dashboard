@@ -18,7 +18,7 @@ module.exports = () => {
   mentors = attachScore(mentors)
 
   const dataJson = buildJson(mentors)
-  return writefile(JSON_FOLDER_PATH, JSON.stringify(dataJson))
+  return fs.writeFileSync(JSON_FOLDER_PATH, JSON.stringify(dataJson))
     .catch((err) => {
       console.log('error while writing file')
       console.log(err)
